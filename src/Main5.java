@@ -8,25 +8,23 @@ import java.util.List;
 public class Main5 {
 
 
-    List<String> employees;
-
 
     public static void main(String[] args) {
+        List<Empleado> employeesObjList;
+        List<String> employeesStringList  = new ArrayList<>();;
         Path pathToFile = Paths.get("E:\\DEV.MAYBE\\INFORMATORIO 2021\\JAVA\\EJERCICIOS PROPUESTOS\\personalities.txt");
         loadFile(pathToFile);
+
     }
 
-    public List<String> loadFile(Path file){
-        employees = new ArrayList<>();
+    public static List<String> loadFile(Path file){
         try {
             String content = Files.readString(file);
             System.out.println(content);
         }catch (IOException e){
             e.printStackTrace();
         }
-        return employees
-
-
+        return null;
     }
 }
 
